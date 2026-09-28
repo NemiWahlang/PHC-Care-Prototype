@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PHC Care — Meghalaya</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <h1>PHC Care</h1>
+      <p class="sub">Text a village name — know before you walk whether the doctor's in.</p>
+    </header>
+
+    <main class="layout">
+      <section class="phone" aria-label="Chat with the status bot">
+        <div class="phone-bar">
+          <span class="pulse"></span>
+          <div>
+            <div class="phone-title">Status Bot</div>
+            <div class="phone-subtitle">Online</div>
+          </div>
+        </div>
+
+        <div class="messages" id="messages">
+          <div class="msg bot">
+            Hi! Type a village or PHC name and I'll tell you if a doctor is currently checked in.
+          </div>
+        </div>
+
+        <form class="composer" id="composer">
+          <input
+            type="text"
+            id="villageInput"
+            placeholder="e.g. Sohra"
+            autocomplete="off"
+            aria-label="Village name"
+          />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+
+      <aside class="monitor" aria-label="PHC network monitor">
+        <h2>PHC Network</h2>
+        <p class="monitor-sub">
+          For the demo: toggle a PHC to simulate a doctor's phone connecting
+          to (or leaving) the clinic Wi-Fi, then ask the bot about that village.
+        </p>
+        <ul id="phcList" class="phc-list"></ul>
+      </aside>
+    </main>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
